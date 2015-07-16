@@ -10,7 +10,7 @@ api_family_index GET    /api/family(.:format)          api/family#index
                  PATCH  /api/family/:id(.:format)      api/family#update
                  PUT    /api/family/:id(.:format)      api/family#update
                  DELETE /api/family/:id(.:format)      api/family#destroy
-
+```
 
 ### family object:
 
