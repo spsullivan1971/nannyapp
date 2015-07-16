@@ -1,0 +1,160 @@
+$darkViolet: rgba(53,50,74,1);
+$lightViolet: rgba(102,100,117,1);
+$lavender: rgba(140,135,155,1);
+$smoke: rgba(253,252,254,1);
+$rose: rgba(214,25,63,1);
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, a, p, li {
+  margin: 0;
+  padding: 0;
+}
+
+////////////////////////////////////
+//            Header             //
+//////////////////////////////////
+
+.header {
+  position: fixed;
+  height: 7vh;
+  background-color: $lavender;
+  width: 100vw;
+
+  .logoLeft {
+    height: 7vh;
+    width: 20vw;
+    float: left;
+    margin-left: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2em;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+////////////////////////////////////
+//           HomePage            //
+//////////////////////////////////
+
+.homeWrap {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+
+  .input {
+    width: 60%;
+    height: 200px;
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    form {
+      width: 100%;
+      input {
+        text-align: center;
+        border: 1px solid lightgray;
+        border-radius: 25px;
+        font-size: 4em;
+        width: 100%;
+      }
+      ::-webkit-input-placeholder {
+         color: lightgray;
+      }
+      input:focus {
+        box-shadow: 0 0 3pt 2pt $lavender;
+        border-radius: 25px;
+        outline: none;
+      }
+    }
+  }
+  .whichButtons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    height: 200px;
+    width: 60vw;
+    i {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+              align-items: center;
+      font-size: 6em;
+      width: 50%;
+    }
+    i:hover {
+      color: $lavender;
+      cursor: pointer;
+    }
+    #usersI {
+      border-left: 2px solid lightgray;
+    }
+  }
+}
