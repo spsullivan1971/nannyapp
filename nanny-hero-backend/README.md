@@ -1,5 +1,6 @@
 ### current routes:
 
+```
           Prefix Verb   URI Pattern                    Controller#Action
 api_family_index GET    /api/family(.:format)          api/family#index
                  POST   /api/family(.:format)          api/family#create
@@ -13,6 +14,7 @@ api_family_index GET    /api/family(.:format)          api/family#index
 
 ### family object:
 
+```
 family = {
   name: unique family name
   phone_number: family's phone number
@@ -21,6 +23,7 @@ family = {
   nanny: nanny's name
   children: [ child_object_1, child_object_2, child_object_3 ]
 }
+```
 Required to create:
 * name
 * phone_number
@@ -30,6 +33,7 @@ Required to create:
 
 ### child object:
 
+```
 child = {
   name: child's name
   age: child's age
@@ -40,6 +44,7 @@ child = {
   potty_trained: true or false
   special_needs: true or false
 }
+```
 Required to create:
 * name
 
