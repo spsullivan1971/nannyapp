@@ -6,5 +6,9 @@ class CreateFamilyNannies < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :family_nannies, :family_id
+    add_index :family_nannies, :nanny_id
+    add_index :family_nannies, [:family_id, :nanny_id], unique: true
   end
 end

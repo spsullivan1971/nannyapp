@@ -1,15 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  phone_number: MyString
-  address: MyString
-  picture: MyString
-  nanny_name: MyString
+  name: Poe Family
+  phone_number: 843-222-2222
+  address: 1234 Not Your Street, Charleston SC 29414
+  picture: http://www.randompic.com
 
 two:
-  name: MyString
-  phone_number: MyString
-  address: MyString
-  picture: MyString
-  nanny_name: MyString
+  name: Smith Family
+  phone_number: 999-999-9999
+  address: 2244 Meeting St., Charleston SC 29401
+  picture: 
