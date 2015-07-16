@@ -51,8 +51,10 @@ Required to create:
 
 ### nanny object:
 
+```
 nanny = {
   name: nanny's name
   family_id: family_id associated with nanny
 }
+```
 Created when family is made
