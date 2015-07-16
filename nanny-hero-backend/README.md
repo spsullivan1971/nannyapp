@@ -57,4 +57,4 @@ nanny = {
   family_id: family_id associated with nanny
 }
 ```
-Created when family is made
+Currently created when family is made
