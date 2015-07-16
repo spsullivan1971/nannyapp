@@ -1,3 +1,16 @@
+### current routes:
+
+          Prefix Verb   URI Pattern                    Controller#Action
+api_family_index GET    /api/family(.:format)          api/family#index
+                 POST   /api/family(.:format)          api/family#create
+  new_api_family GET    /api/family/new(.:format)      api/family#new
+ edit_api_family GET    /api/family/:id/edit(.:format) api/family#edit
+      api_family GET    /api/family/:id(.:format)      api/family#show
+                 PATCH  /api/family/:id(.:format)      api/family#update
+                 PUT    /api/family/:id(.:format)      api/family#update
+                 DELETE /api/family/:id(.:format)      api/family#destroy
+
+
 ### family object:
 
 family = {
