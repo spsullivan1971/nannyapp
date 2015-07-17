@@ -1,0 +1,3 @@
+[submodule "nanny-hero-backend"]
+	path = nanny-hero-backend
+	url = git@github.com:andrewtpoe/nanny-hero-backend.git
