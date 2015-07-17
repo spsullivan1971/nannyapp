@@ -18,7 +18,7 @@
             $http.post(url, familyId);
           }
 
-          var deleteFamily: function(familyId){
+          var deleteFamily = function(familyId){
             $http.delete(url, familyId);
           }
 

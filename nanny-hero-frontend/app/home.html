@@ -1,11 +1,11 @@
-<div class="homeWrap">
+<div class="homeWrap" ng-controller="HomeController">
   <div class="input">
     <form method="submit">
       <input type="text" name="" placeholder="Name?"></input>
     </form>
   </div>
   <div class="whichButtons">
-    <i class="fa fa-user"></i>
-    <i id="usersI" class="fa fa-users"></i>
+    <i class="fa fa-user" ng-click="navUser()"></i>
+    <i id="usersI" class="fa fa-users" ng-click="navFamily()"></i>
   </div>
 </div>

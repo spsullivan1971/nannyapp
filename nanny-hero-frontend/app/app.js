@@ -2,7 +2,8 @@
   'use strict';
   angular
     .module('nannyHero', [
-      'ngRoute'
+      'ngRoute',
+      'family'
       ])
     .config(function($routeProvider){
       $routeProvider
