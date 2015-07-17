@@ -1,27 +1,27 @@
 <article class="bs-example">
-   <form>
+   <form name= "addFamily">
        <div class="form-group">
            <label for="familyName">Family Name</label>
-           <input type="Family Name" class="form-control" id="inputName" placeholder="FamilyName">
+           <input type="Family Name" class="form-control" id="inputName" ng-model= "family.name" placeholder="FamilyName" />
        </div>
        <div class="form-group">
-           <label for="familyPhone">Phone Number</label>
-           <input type="Phone Number" class="form-control" id="inputPhone" placeholder="Phone Number">
+           <label for="familyPhone" >Phone Number</label>
+           <input type="Phone Number" class="form-control" id="inputPhone" placeholder="Phone Number" ng-model="family.number" />
        </div>
                <div class="form-group">
            <label for="inputAddress">Home Address</label>
-           <input type="address" class="form-control" id="inputAddress" placeholder="Address">
+           <input type="address" class="form-control" id="inputAddress" placeholder="Address" ng-model="family.address"/>
        </div>
        <div class="form-group">
            <label for="inputNanny">Nanny Name</label>
-           <input type="inputNanny" class="form-control" id="inputNanny" placeholder="Nanny Name">
+           <input type="inputNanny" class="form-control" id="inputNanny" placeholder="Nanny Name" ng-model="family.nanny" />
        </div>
 
        <div class="form-group">
          <label for="inputPhotoURL">Photo URL</label>
-         <input type="inputPhotoURL" class="form-control" id="inputPhotoURL" placeholder="http://www.your_url.com">
+         <input type="inputPhotoURL" class="form-control" id="inputPhotoURL" placeholder="http://www.your_url.com" ng-model="family.picture"/>
       </div>
-       <button type="submit" class="btn btn-primary">Submit Family</button>
-       <button type="submit" class="btn btn-secondary">Add Child</button>
+       <!-- <button type="submit" class="btn btn-primary" ng-click = "addFamily(family)">Submit Family</button> -->
+       <button type="submit" class="btn btn-secondary" ng-click="addChild(family)">Add Child</button>
    </form>
 </article>
