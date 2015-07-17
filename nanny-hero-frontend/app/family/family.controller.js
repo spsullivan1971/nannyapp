@@ -3,15 +3,19 @@
 
   angular
     .module('family')
-    .controller('FamilyController', function ($scope, FamilyService, _) {
+    .controller('FamilyController', function ($scope, FamilyService) {
 
-      var addFamily = function(familyObject){
+      $scope.getFamily = function(familyName) {
+        FamilyService.getFamily()
+      };
+
+      $scope.addFamily = function(familyObject){
         FamilyService.addFamily(familyObject);
       };
 
       $scope.addChild = function(family){
           $scope.family = family;
-      }
+      };
 
     });
 }());
