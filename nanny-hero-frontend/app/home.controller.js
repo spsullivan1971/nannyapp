@@ -18,5 +18,11 @@
             console.log($scope.nannyInfo.name);
           })
         };
+        $scope.fetchFamilyInfo = function(familyName) {
+          FamilyService.getFamily(familyName).then(function(data) {
+            $rootScope.familyInfo = info.data[0];
+            console.log(info.data[0])
+          })
+        }
     });
 })();
