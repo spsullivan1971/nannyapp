@@ -12,7 +12,7 @@
           controller: 'FamilyController'
         })
         .when('/addChild',{
-          templateUrl: 'app/family/views/addChild',
+          templateUrl: 'app/family/views/addChild.html',
           controller: 'FamilyController'
         })
         .when('/myFamily', {
@@ -20,4 +20,4 @@
           controller: 'FamilyController'
         })
     });
-}());
+})();
