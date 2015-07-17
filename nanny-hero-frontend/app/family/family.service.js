@@ -4,7 +4,7 @@
     .module('family')
     .factory('FamilyService', function ($http, $rootScope) {
 
-          var url = 'http://localHost:3000';
+          var url = 'https://nanny-hero-backend.herokuapp.com/api/family.json';
 
           var addFamily = function(familyObject){
             $http.post(url, familyObject);
@@ -23,7 +23,7 @@
           }
 
           var getNannyInfo = function(nannyName){
-            $http.get(url, nannyName);
+            return $http.get(url, nannyName);
           }
 
           return {

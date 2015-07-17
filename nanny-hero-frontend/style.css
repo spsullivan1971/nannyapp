@@ -244,5 +244,17 @@ h1, h2, h3, h4, h5, a, p, li {
       background-color: #666475; }
     .nannyViewWrap .viewChildren button:focus {
       outline: none; }
+  .nannyViewWrap .deleteFromView {
+    position: absolute;
+    right: 10px;
+    top: 5px; }
+    .nannyViewWrap .deleteFromView i {
+      color: #d6193f;
+      font-size: 20px; }
+    .nannyViewWrap .deleteFromView i:hover {
+      color: #99112d;
+      cursor: pointer; }
+    .nannyViewWrap .deleteFromView i:active {
+      color: #d6193f; }
 
 /*# sourceMappingURL=style.css.map */

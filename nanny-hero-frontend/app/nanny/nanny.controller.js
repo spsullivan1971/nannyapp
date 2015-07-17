@@ -6,7 +6,7 @@
     .controller('NannyController', function ($scope, FamilyService) {
 
         $scope.deleteFamily = function() {
-
+          console.log("I need a delete function");
         };
 
     });
