@@ -3,7 +3,8 @@
   angular
     .module('nannyHero', [
       'ngRoute',
-      'family'
+      'family',
+      'nanny'
       ])
     .config(function($routeProvider){
       $routeProvider
