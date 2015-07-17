@@ -24,6 +24,22 @@ h1, h2, h3, h4, h5, a, p, li {
   padding: 0;
 }
 
+.btn-primary {
+  background-color: $rose;
+}
+
+.btn-primary:hover {
+  background-color: $lightViolet;
+}
+
+.btn-primary:active {
+  background-color: $lightViolet;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
 ////////////////////////////////////
 //            Header             //
 //////////////////////////////////
@@ -51,9 +67,13 @@ h1, h2, h3, h4, h5, a, p, li {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
+    a {
+      text-decoration: none;
+    }
     h1 {
       font-family: 'Open Sans', sans-serif;
       font-size: 2em;
+      font-weight: 300;
       color: white;
       margin: 0;
       padding: 0;
@@ -133,6 +153,23 @@ h1, h2, h3, h4, h5, a, p, li {
             align-items: center;
     height: 200px;
     width: 60vw;
+    a {
+      width: 50%;
+      color: black;
+      text-decoration: none;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+              align-items: center;
+    }
     i {
       display: -webkit-box;
       display: -webkit-flex;
@@ -160,7 +197,7 @@ h1, h2, h3, h4, h5, a, p, li {
 }
 
 ////////////////////////////////////
-//           addFamily           //
+//             Forms             //
 //////////////////////////////////
 
 .bs-example {
@@ -173,5 +210,113 @@ h1, h2, h3, h4, h5, a, p, li {
   form {
     margin-top: 50px;
     width: 80%;
+  }
+}
+
+////////////////////////////////////
+//          Nanny View           //
+//////////////////////////////////
+
+.pageWrap {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+}
+
+.contentWrap {
+  width: 100%;
+  height: 80vh;
+}
+
+.nannyViewWrap {
+  border: 2px solid lightgray;
+  height: 30%;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  .picture {
+    float: left;
+    height: 100%;
+    width: 175px;
+    margin-left: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  .info {
+    float: right;
+    height: 100%;
+    width: 70%;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    li {
+      margin: 10px
+    }
+    i {
+      margin-right: 25px
+    }
+  }
+  .viewChildren {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    button {
+      background-color: $rose;
+      width: 100px;
+    }
+    button:hover {
+      background-color: rgba(214,25,63,.8);
+    }
+    button:active {
+      background-color: $lightViolet;
+    }
+    button:focus {
+      outline: none;
+    }
+  }
+  .deleteFromView {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    i {
+      color: $rose;
+      font-size: 20px;
+    }
+    i:hover {
+      color: rgba(153, 17, 45, 1);
+      cursor: pointer;
+    }
+    i:active {
+      color: $rose;
+    }
   }
 }

@@ -1,11 +1,11 @@
 <div class="homeWrap" ng-controller="HomeController">
   <div class="input">
     <form method="submit">
-      <input type="text" name="" placeholder="Name?"></input>
+      <input ng-model="name" type="text" name="" placeholder="Name?"></input>
     </form>
   </div>
   <div class="whichButtons">
-    <i class="fa fa-user" ng-click="navUser()"></i>
-    <i id="usersI" class="fa fa-users" ng-click="navFamily()"></i>
+    <a href="/nanny-hero-frontend/#/nannyView"><i class="fa fa-user" ng-click="fetchNannyInfo(name)"></i></a>
+    <a id="usersI" href="/nanny-hero-frontend/#/addFamily"><i class="fa fa-users" ng-click="navFamily()"></i></a>
   </div>
 </div>

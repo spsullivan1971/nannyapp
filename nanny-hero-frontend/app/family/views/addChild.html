@@ -1,50 +1,46 @@
 <div class="bs-example" ng-controller="FamilyController">
-   <form>
+   <form name="addChildForm">
        <div class="form-group">
            <label for="childName">Name</label>
-           <input type="Child Name" class="form-control" id="inputName" placeholder="Child Name">
+           <input type="Child Name" class="form-control" name="inputName" placeholder="Child Name" ng-model="child.name" value=""/>
        </div>
        <div class="form-group">
            <label for="childAge">Age</label>
-           <input type="Child Age" class="form-control" id="inputPhone" placeholder="Age">
+           <input type="Child Age" class="form-control" name="inputAge" placeholder="Age" ng-model="child.age" value=""/>
        </div>
                <div class="form-group">
            <label for="childAllergies">Allergies</label>
-           <input type="Allerigies" class="form-control" id="inputAddress" placeholder="Allergies">
+           <input type="Allergies" class="form-control" name="inputAllergies" placeholder="Allergies" ng-model="child.allergies" value=""/>
        </div>
              <div class="form-group">
            <label for="childFavFood">Favorite Food</label>
-           <input type="Food" class="form-control" id="inputNanny" placeholder="Favorite Food">
+           <input type="Food" class="form-control" name="inputFood" placeholder="Favorite Food" ng-model="child.fav_food" value=""/>
        </div>
            <div class="form-group">
    <label for="inputNanny">Interests</label>
-   <input type="inputNanny" class="form-control" id="inputNanny" placeholder="primary">
-   <input type="inputNanny" class="form-control" id="inputNanny" placeholder="secondary">
-   <input type="inputNanny" class="form-control" id="inputNanny" placeholder="additional">
+   <input type="inputNanny" class="form-control" name="inputInterests" placeholder="primary" ng-model="child.interests" value=""/>
        </div>
 
        <div class="form-group">
    <label for="inputNanny">Bed-Time</label>
-   <input type="inputNanny" class="form-control" id="inputNanny" placeholder="Bed-Time">
+   <input type="inputNanny" class="form-control" name="inputBedTime" placeholder="Bed-Time" ng-model="child.bed_time" value="">
      </div>
          <div class="form-group">
 
 
            <div class="checkbox">
-             <label>Potty-Trained</label>
-             <label><input type="checkbox">Yes</label>
-               <label><input type="checkbox">No</label>
+             <label>Potty-Trained?</label>
+             <label><input type="checkbox"  name="inputPotty" ng-model="child.potty_trained" value="false"></label>
            </div>
 
              <div class="checkbox">
-             <label>Special Needs</label>
-             <label><input type="checkbox">Yes</label>
-               <label><input type="checkbox">No</label>
+             <label>Special Needs?</label>
+             <label><input type="checkbox" name="inputNeeds" ng-model="child.special_needs" value="false"></label>
            </div>
        <!--<div class="checkbox">
            <label><input type="checkbox"> Remember me</label>
        </div>-->
-       <button type="submit" class="btn btn-primary">Submit</button>
-       <button type="submit" class="btn btn-secondary">Add Child</button>
+       <button type="submit" class="btn btn-primary" ng-click="addFamily(null, child)">Submit</button>
+       <button type="submit" class="btn btn-secondary" ng-click="addChild(null, child)">Add Child</button>
    </form>
 </div>

@@ -1,0 +1,26 @@
+<div class='pageWrap'>
+<div class='contentWrap'>
+<div class='nannyViewWrap' ng-controller='HomeController'>
+
+  <div class='picture'>
+    <img src="http://api.randomuser.me/portraits/women/31.jpg" alt="">
+  </div>
+
+  <div class='info'>
+    <h1>{{nannyInfo.name}}</h1>
+    <li><i class="fa fa-phone"></i>{{nannyInfo.phone_number}}</li>
+    <li><i class="fa fa-home"></i>{{nannyInfo.address}}</li>
+  </div>
+
+  <div class='viewChildren'>
+    <button type="submit" class="btn btn-primary">Child Info</button>
+  </div>
+
+  <div class='deleteFromView'>
+    <i class="fa fa-times" ng-click="deleteFamily()"></i>
+  </div>
+
+
+</div>
+</div>
+</div>
