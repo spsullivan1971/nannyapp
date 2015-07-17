@@ -136,6 +136,7 @@ h1, h2, h3, h4, h5, a, p, li {
   align-items: center;
   justify-content: center; }
   .bs-example form {
+    margin-top: 50px;
     width: 80%; }
 
 /*# sourceMappingURL=style.css.map */
