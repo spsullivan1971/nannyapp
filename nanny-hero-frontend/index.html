@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Nanny Hero</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body ng-app="nannyHero">
+
+  <div class="header">
+    <div class="logoLeft">
+      <h1>NannyHero</h1>
+    </div>
+  </div>
+
+  <ng-view><ng-view>
+
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/home.controller.js"></script>
+
+<script src="app/nanny/nanny.module.js"></script>
+<script src="app/nanny/nanny.controller.js"></script>
+<script src="app/nanny/nanny.service.js"></script>
+
+<script src="app/family/family.module.js"></script>
+<script src="app/family/family.controller.js"></script>
+<script src="app/family/family.service.js"></script>
+
+</body>
+</html>
