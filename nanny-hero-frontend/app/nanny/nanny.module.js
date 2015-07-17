@@ -9,7 +9,7 @@
       $routeProvider
         .when('/nannyView', {
           templateUrl: 'app/nanny/views/nanny.html',
-          controller: 'FamilyController'
+          controller: 'NannyController'
         })
     });
 })();

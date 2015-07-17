@@ -22,11 +22,16 @@
             $http.delete(url, familyId);
           }
 
+          var getNannyInfo = function(nannyName){
+            $http.get(url, nannyName);
+          }
+
           return {
             addFamily: addFamily,
             getFamily: getFamily,
             updateFamily: updateFamily,
-            deleteFamily: deleteFamily
+            deleteFamily: deleteFamily,
+            getNannyInfo: getNannyInfo
           };
   });
 
