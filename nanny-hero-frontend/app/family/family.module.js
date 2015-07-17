@@ -8,15 +8,15 @@
     .config(function($routeProvider){
       $routeProvider
         .when('/addFamily', {
-          templateUrl: 'family/views/family.html',
+          templateUrl: 'app/family/views/family.html',
           controller: 'FamilyController'
         })
         .when('/addChild',{
-          templateUrl: 'family/views/addChild',
+          templateUrl: 'app/family/views/addChild',
           controller: 'FamilyController'
         })
         .when('/myFamily', {
-          templateUrl: 'family/views/myFamily.html',
+          templateUrl: 'app/family/views/myFamily.html',
           controller: 'FamilyController'
         })
     });
