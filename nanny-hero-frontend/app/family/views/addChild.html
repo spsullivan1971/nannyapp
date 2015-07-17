@@ -14,7 +14,7 @@
        </div>
              <div class="form-group">
            <label for="childFavFood">Favorite Food</label>
-           <input type="Food" class="form-control" name="inputFood" placeholder="Favorite Food" ng-model="child.favoriteFood" value=""/>
+           <input type="Food" class="form-control" name="inputFood" placeholder="Favorite Food" ng-model="child.fav_food" value=""/>
        </div>
            <div class="form-group">
    <label for="inputNanny">Interests</label>
@@ -23,24 +23,24 @@
 
        <div class="form-group">
    <label for="inputNanny">Bed-Time</label>
-   <input type="inputNanny" class="form-control" name="inputBedTime" placeholder="Bed-Time" ng-model="child.bedTime" value="">
+   <input type="inputNanny" class="form-control" name="inputBedTime" placeholder="Bed-Time" ng-model="child.bed_time" value="">
      </div>
          <div class="form-group">
 
 
            <div class="checkbox">
              <label>Potty-Trained?</label>
-             <label><input type="checkbox"  name="inputPotty" ng-model="child.pottyTrained" value="false"></label>
+             <label><input type="checkbox"  name="inputPotty" ng-model="child.potty_trained" value="false"></label>
            </div>
 
              <div class="checkbox">
              <label>Special Needs?</label>
-             <label><input type="checkbox" name="inputNeeds" ng-model="child.specialNeeds" value="false"></label>
+             <label><input type="checkbox" name="inputNeeds" ng-model="child.special_needs" value="false"></label>
            </div>
        <!--<div class="checkbox">
            <label><input type="checkbox"> Remember me</label>
        </div>-->
-       <button type="submit" class="btn btn-primary" ng-click="addFamily(family, child)">Submit</button>
-       <button type="submit" class="btn btn-secondary" ng-click="addChild(family, child)">Add Child</button>
+       <button type="submit" class="btn btn-primary" ng-click="addFamily(null, child)">Submit</button>
+       <button type="submit" class="btn btn-secondary" ng-click="addChild(null, child)">Add Child</button>
    </form>
 </div>
