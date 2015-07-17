@@ -6,7 +6,7 @@
        </div>
        <div class="form-group">
            <label for="familyPhone" >Phone Number</label>
-           <input type="Phone Number" class="form-control" id="inputPhone" placeholder="Phone Number" ng-model="family.number" />
+           <input type="Phone Number" class="form-control" id="inputPhone" placeholder="Phone Number" ng-model="family.phone_number" />
        </div>
                <div class="form-group">
            <label for="inputAddress">Home Address</label>
@@ -22,6 +22,6 @@
          <input type="inputPhotoURL" class="form-control" id="inputPhotoURL" placeholder="http://www.your_url.com" ng-model="family.picture"/>
       </div>
        <!-- <button type="submit" class="btn btn-primary" ng-click = "addFamily(family)">Submit Family</button> -->
-       <button type="submit" class="btn btn-secondary" ng-click="addChild(family)">Add Child</button>
+       <button type="submit" class="btn btn-secondary" ng-click="addChild(family, null)">Add Child</button>
    </form>
 </article>

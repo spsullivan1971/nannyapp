@@ -5,18 +5,19 @@
     .module('family')
     .controller('FamilyController', function ($scope, $rootScope,FamilyService, $location) {
 
+      $scope.family= {
+        name: "",
+        phone_number: "",
+        address: "",
+        nanny: "",
+        picture: ""
+      }
+
       $scope.getFamily = function(familyName) {
         FamilyService.getFamily()
       };
 
       $scope.addFamily = function(familyObject, childInfo){
-        // if(childInfo === undefined){
-        //   $rootScope.family = familyObject;
-        //   console.log("family is: ", familyObject);
-        //   // FamilyService.addFamily(familyObject);
-        //   $location.path('/myFamily');
-        // }
-        // else{
         if(childInfo === undefined){
 
           alert("Child Name Must Be Present");
@@ -26,50 +27,63 @@
             alert("Child Name Must Be Present");
           }
           else{
-            var children = $rootScope.family.child.length;
-            $rootScope.family.child[children] = childInfo;
+            var children = $rootScope.family.children.length;
+            $rootScope.family.children[children] = childInfo;
             console.log("family is: ", $rootScope.family);
-            // FamilyService.addFamily(familyObject);
+            FamilyService.addFamily($rootScope.family);
             $location.path('/myFamily');
           }
         }
         else{
-          var children = $rootScope.family.child.length;
-          $rootScope.family.child[children] = childInfo;
+          var children = $rootScope.family.children.length;
+          $rootScope.family.children[children] = childInfo;
           console.log("family is: ", $rootScope.family);
-          // FamilyService.addFamily(familyObject);
+          FamilyService.addFamily($rootScope.family);
           $location.path('/myFamily');
         }
-
-        // }
       };
+
+      $scope.child= {
+        name: "",
+        age: "",
+        allergies: "",
+        fav_food: "",
+        interests: "",
+        bed_time: "",
+        potty_trained: false,
+        special_needs: false
+      }
 
       var defaultAddChild ={
         name: "",
         age: "",
         allergies: "",
-        favoriteFood: "",
+        fav_food: "",
         interests: "",
-        bedTime: "",
-        pottyTrained: false,
-        specialNeeds: false
+        bed_time: "",
+        potty_trained: false,
+        special_needs: false
       }
 
 
       $scope.addChild = function(family, childInfo){
 
-        $rootScope.family = family;
-        console.log("in add child family is: ", $rootScope.family);
+        if(family !== null){
+          $rootScope.family = family;
+          console.log("in add child family is: ", $rootScope.family);
+        }
 
-        if($rootScope.family.child === undefined){
-          $rootScope.family.child = [];
-          console.log("child", $rootScope.family.child);
+
+        if(childInfo === null){
+          $rootScope.family.children = [];
+          console.log("child", $rootScope.family.children);
           $location.path('/addChild');
         }
         else{
-          var children = $rootScope.family.child.length;
-          $rootScope.family.child[children] = childInfo;
-          console.log($rootScope.family.child);
+          var children = $rootScope.family.children.length;
+          $rootScope.family.children[children] = childInfo;
+          console.log($rootScope.family);
+          console.log($rootScope.family.children);
           $scope.addChildForm.$setPristine();
           $scope.child = defaultAddChild;
           $location.path('/addChild');

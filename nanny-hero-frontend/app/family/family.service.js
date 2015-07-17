@@ -7,7 +7,12 @@
           var url = 'https://nanny-hero-backend.herokuapp.com/api/family.json';
 
           var addFamily = function(familyObject){
-            $http.post(url, familyObject);
+            console.log("in service: ", familyObject);
+            var obj = {
+              family: familyObject
+            }
+            console.log("this is the object: ", obj);
+            $http.post(url, obj);
           };
 
           var getFamily = function(familyName){
