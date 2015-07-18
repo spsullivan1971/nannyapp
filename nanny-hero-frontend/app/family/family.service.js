@@ -12,7 +12,7 @@
               family: familyObject
             }
             console.log("this is the object: ", obj);
-            $http.post(url, obj);
+            $http.post(url + '.json', obj);
           };
 
           var getFamily = function(familyName){
@@ -20,7 +20,7 @@
           }
 
           var updateFamily = function(familyId){
-            $http.post(url + familyId);
+            $http.post(url + '.json' + familyId);
           }
 
           var deleteFamily = function(familyId){

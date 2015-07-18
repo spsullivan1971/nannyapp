@@ -3,13 +3,14 @@
 <div class='familyViewWrap' ng-controller='HomeController'>
 
   <div class='picture'>
-    <img src="http://api.randomuser.me/portraits/women/96.jpg" alt="">
+    <img src={{familyInfo.picture}} alt="">
   </div>
 
   <div class='info'>
     <h1>{{familyInfo.name}}</h1>
     <li><i class="fa fa-phone"></i>{{familyInfo.phone_number}}</li>
     <li><i class="fa fa-home"></i>{{familyInfo.address}}</li>
+    <li><i class="fa fa-user"></i>{{familyInfo.nanny}}</li>
   </div>
 
   <div class='viewChildren'>
