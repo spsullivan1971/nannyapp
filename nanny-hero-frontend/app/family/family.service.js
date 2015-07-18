@@ -24,7 +24,7 @@
           }
 
           var deleteFamily = function(familyId){
-            $http.delete(url, familyId);
+            $http.delete(url + "/" + familyId + ".json");
           }
 
           var getNannyInfo = function(nannyName){
