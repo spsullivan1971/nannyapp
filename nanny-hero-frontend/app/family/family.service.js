@@ -4,7 +4,7 @@
     .module('family')
     .factory('FamilyService', function ($http, $rootScope) {
 
-          var url = 'https://nanny-hero-backend.herokuapp.com/api/family.json';
+          var url = 'https://nanny-hero-backend.herokuapp.com/api/family';
 
           var addFamily = function(familyObject){
             console.log("in service: ", familyObject);
@@ -12,15 +12,15 @@
               family: familyObject
             }
             console.log("this is the object: ", obj);
-            $http.post(url, obj);
+            $http.post(url + '.json', obj);
           };
 
           var getFamily = function(familyName){
-            $http.get(url, familyName);
+            return $http.get(url + "/" + familyName + '.json');
           }
 
           var updateFamily = function(familyId){
-            $http.post(url, familyId);
+            $http.post(url + '.json' + familyId);
           }
 
           var deleteFamily = function(familyId){
@@ -28,7 +28,7 @@
           }
 
           var getNannyInfo = function(nannyName){
-            return $http.get(url, nannyName);
+            return $http.get(url + '.json', nannyName);
           }
 
           return {

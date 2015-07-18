@@ -1,4 +1,9 @@
+<video id="earth-video" class="video" autoplay muted loop>
+  <source ng-src="../media/bars_added.webm" type="video/webm">
+</video>
+
 <div class="homeWrap" ng-controller="HomeController">
+  <div class="frontWrap">
   <div class="input">
     <form method="submit">
       <input ng-model="name" type="text" name="" placeholder="Name?"></input>
@@ -6,6 +11,7 @@
   </div>
   <div class="whichButtons">
     <a href="/nanny-hero-frontend/#/nannyView"><i class="fa fa-user" ng-click="fetchNannyInfo(name)"></i></a>
-    <a id="usersI" href="/nanny-hero-frontend/#/addFamily"><i class="fa fa-users" ng-click="navFamily()"></i></a>
+    <a id="usersI" href="/nanny-hero-frontend/#/addFamily"><i class="fa fa-users" ng-click="fetchFamilyInfo(name)"></i></a>
+  </div>
   </div>
 </div>
