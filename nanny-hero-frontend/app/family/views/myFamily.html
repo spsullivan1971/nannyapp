@@ -1,9 +1,18 @@
+<div class="header">
+  <div class="logoLeft">
+    <a href="/nanny-hero-frontend/#/"><h1>NannyHero</h1></a>
+  </div>
+  <div class="logoRight">
+    <h1>Welcome, {{familyInfo.name}}!</h1>
+  </div>
+</div>
+
 <div class='pageWrap'>
 <div class='contentWrap'>
 <div class='familyViewWrap' ng-controller='HomeController'>
 
   <div class='picture'>
-    <img src={{familyInfo.picture}} alt="">
+    <img ng-src={{familyInfo.img}} alt="">
   </div>
 
   <div class='info'>
@@ -22,7 +31,7 @@
   </div>
 
   <div class='deleteFromView'>
-    <i class="fa fa-times" ng-click="deleteFamily()"></i>
+    <i class="fa fa-times" ng-click="deleteFamily(familyInfo.name)"></i>
   </div>
 
 </div>

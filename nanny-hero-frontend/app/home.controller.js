@@ -12,22 +12,38 @@
         }
         $scope.fetchNannyInfo = function(nannyName) {
           FamilyService.getNannyInfo(nannyName).then(function(info){
-            $rootScope.nannyInfo = info.data.families[0];
-            console.log(info.data)
-            console.log(info.data.name);
-            console.log($scope.nannyInfo.address);
+            $rootScope.nannyInfo = info;
+            $rootScope.nannyName = nannyName;
           })
         };
         $scope.fetchFamilyInfo = function(familyName) {
-          FamilyService.getFamily(familyName).success(function(info) {
-            $rootScope.familyInfo = info;
-            console.log(info)
-            console.log(info.children)
-            $location.path('/myFamily');
-          }).error(function(data){
-            $location.path('/addFamily');
-          })
+            if (familyName === undefined) {
+              $location.path('/addFamily');
+            } else {
+            FamilyService.getFamily(familyName).success(function(info) {
+              $rootScope.familyInfo = info;
+              console.log(info)
+              console.log(info.children)
+              $location.path('/myFamily');
+            }).error(function(data){
+              $location.path('/addFamily');
+            })
+          }
         }
+
+        $scope.deleteNanny = function(familyName) {
+          FamilyService.deleteNanny(familyName).success(function(){
+            console.log('No longer nanny for family');
+            $location.path('/');
+          })
+        };
+
+        $scope.deleteFamily = function(familyName) {
+          FamilyService.deleteFamily(familyName).success(function(){
+            console.log('No longer a family');
+            $location.path('/');
+          })
+        };
 
         $scope.familyPage = function() {
           return $location.$$path === '/myFamily'
@@ -39,7 +55,11 @@
 
         $scope.animationsEnabled = true;
 
-        $scope.open = function (size, data) {
+        $scope.open = function (data) {
+
+        console.log(data);
+
+        $rootScope.nannyChildren = data;
 
         var modalInstance = $modal.open({
           animation: $scope.animationsEnabled,

@@ -24,12 +24,16 @@
             $http.post(url + '.json' + familyId);
           }
 
-          var deleteFamily = function(familyId){
-            $http.delete(url + "/" + familyId + ".json");
+          var deleteFamily = function(familyName){
+            return $http.delete(url + '/' + familyName + '.json');
           }
 
           var getNannyInfo = function(nannyName){
             return $http.get(nannyUrl + "/" + nannyName + '.json');
+          }
+
+          var deleteNanny = function(familyName){
+            return $http.delete(nannyUrl + "/" + familyName + '.json');
           }
 
           return {
@@ -37,7 +41,8 @@
             getFamily: getFamily,
             updateFamily: updateFamily,
             deleteFamily: deleteFamily,
-            getNannyInfo: getNannyInfo
+            getNannyInfo: getNannyInfo,
+            deleteNanny: deleteNanny,
           };
   });
 
