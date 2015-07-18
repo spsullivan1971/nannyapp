@@ -5,6 +5,7 @@
     .factory('FamilyService', function ($http, $rootScope) {
 
           var url = 'https://nanny-hero-backend.herokuapp.com/api/family';
+          var nannyUrl = 'https://nanny-hero-backend.herokuapp.com/api/nanny';
 
           var addFamily = function(familyObject){
             console.log("in service: ", familyObject);
@@ -28,7 +29,7 @@
           }
 
           var getNannyInfo = function(nannyName){
-            return $http.get(url + '.json', nannyName);
+            return $http.get(nannyUrl + "/" + nannyName + '.json');
           }
 
           return {
