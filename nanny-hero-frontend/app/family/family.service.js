@@ -20,8 +20,9 @@
             return $http.get(url + "/" + familyName + '.json');
           }
 
-          var updateFamily = function(familyId){
-            $http.post(url + '.json' + familyId);
+          var updateFamily = function(familyInfo){
+            console.log(familyInfo);
+            return $http.patch(url + '/' + familyInfo.name + '.json', familyInfo);
           }
 
           var deleteFamily = function(familyName){

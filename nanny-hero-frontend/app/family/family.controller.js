@@ -18,7 +18,9 @@
       };
 
       $scope.updateFamily= function(data){
-        console.log(data);
+        FamilyService.updateFamily(data).success(function(data){
+          $location.path('/myFamily');
+        })
       }
 
       $scope.editFamily = function(){
