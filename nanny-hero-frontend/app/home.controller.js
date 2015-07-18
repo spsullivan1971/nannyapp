@@ -13,6 +13,7 @@
         $scope.fetchNannyInfo = function(nannyName) {
           FamilyService.getNannyInfo(nannyName).then(function(info){
             $rootScope.nannyInfo = info;
+            $rootScope.nannyName = nannyName;
           })
         };
         $scope.fetchFamilyInfo = function(familyName) {
@@ -33,6 +34,14 @@
         $scope.deleteNanny = function(familyName) {
           FamilyService.deleteNanny(familyName).success(function(){
             console.log('No longer nanny for family');
+            $location.path('/');
+          })
+        };
+
+        $scope.deleteFamily = function(familyName) {
+          FamilyService.deleteFamily(familyName).success(function(){
+            console.log('No longer a family');
+            $location.path('/');
           })
         };
 
