@@ -46,10 +46,11 @@
 
         $scope.animationsEnabled = true;
 
-        $scope.open = function (size, data) {
+        $scope.open = function (data) {
 
-        console.log($rootScope.nannyInfo)
-        console.log($rootScope.nannyInfo.data.families)
+        console.log(data);
+
+        $rootScope.nannyChildren = data;
 
         var modalInstance = $modal.open({
           animation: $scope.animationsEnabled,
