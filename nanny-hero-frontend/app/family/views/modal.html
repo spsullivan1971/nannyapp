@@ -20,7 +20,7 @@
 </div>
 
 <div ng-controller='HomeController' ng-show='nannyPage()' class='childWrap'>
-<div class='childViewWrap' ng-repeat="childInfo in nannyInfo.children">
+<div class='childViewWrap' ng-repeat="childInfo in nannyChildren.children">
 
   <div class='info'>
     <h1>{{childInfo.name}}</h1>
@@ -31,7 +31,6 @@
     <li>Interests: {{childInfo.interests}}</li>
     <li>Potty Trained: {{childInfo.potty_trained === 't' ? 'Yes':'No'}}</li>
     <li>Special Needs: {{childInfo.special_needs === 't' ? 'Yes':'No'}}</li>
-
   </div>
 
 </div>
