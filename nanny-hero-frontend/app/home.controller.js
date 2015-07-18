@@ -12,10 +12,10 @@
         }
         $scope.fetchNannyInfo = function(nannyName) {
           FamilyService.getNannyInfo(nannyName).then(function(info){
-            $rootScope.nannyInfo = info.data.families[1];
-            console.log(info.data.families[1])
-            console.log(info.data.families[1].name);
-            console.log($scope.nannyInfo.name);
+            $rootScope.nannyInfo = info.data.families[0];
+            console.log(info.data)
+            console.log(info.data.name);
+            console.log($scope.nannyInfo.address);
           })
         };
         $scope.fetchFamilyInfo = function(familyName) {
