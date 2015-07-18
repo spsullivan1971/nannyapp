@@ -1,0 +1,109 @@
+<article class="bs-example">
+   <form name= "addFamily">
+       <div class="form-group">
+           <label for="familyName">Family Name</label>
+           <input type="Family Name" class="form-control" id="inputName" ng-model= "familyInfo.name" placeholder="FamilyName" />
+       </div>
+       <div class="form-group">
+           <label for="familyPhone" >Phone Number</label>
+           <input type="Phone Number" class="form-control" id="inputPhone" placeholder="Phone Number" ng-model="familyInfo.phone_number" />
+       </div>
+               <div class="form-group">
+           <label for="inputAddress">Home Address</label>
+           <input type="address" class="form-control" id="inputAddress" placeholder="Address" ng-model="familyInfo.address"/>
+       </div>
+       <div class="form-group">
+           <label for="inputNanny">Nanny Name</label>
+           <input type="inputNanny" class="form-control" id="inputNanny" placeholder="Nanny Name" ng-model="familyInfo.nanny" />
+       </div>
+
+       <div class="form-group">
+         <label for="inputPhotoURL">Photo URL</label>
+         <input type="inputPhotoURL" class="form-control" id="inputPhotoURL" placeholder="http://www.your_url.com" ng-model="familyInfo.picture"/>
+      </div>
+
+      <div ng-repeat="child in familyInfo.children">
+          <div class="form-group">
+              <label for="childName">Name</label>
+              <input type="Child Name" class="form-control" name="inputName" placeholder="Child Name" ng-model="child.name" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="childAge">Age</label>
+              <input type="Child Age" class="form-control" name="inputAge" placeholder="Age" ng-model="child.age" value=""/>
+          </div>
+                  <div class="form-group">
+              <label for="childAllergies">Allergies</label>
+              <input type="Allergies" class="form-control" name="inputAllergies" placeholder="Allergies" ng-model="child.allergies" value=""/>
+          </div>
+                <div class="form-group">
+              <label for="childFavFood">Favorite Food</label>
+              <input type="Food" class="form-control" name="inputFood" placeholder="Favorite Food" ng-model="child.fav_food" value=""/>
+          </div>
+              <div class="form-group">
+      <label for="inputNanny">Interests</label>
+      <input type="inputNanny" class="form-control" name="inputInterests" placeholder="primary" ng-model="child.interests" value=""/>
+          </div>
+
+          <div class="form-group">
+      <label for="inputNanny">Bed-Time</label>
+      <input type="inputNanny" class="form-control" name="inputBedTime" placeholder="Bed-Time" ng-model="child.bed_time" value="">
+        </div>
+            <div class="form-group">
+
+
+              <div class="checkbox">
+                <label>Potty-Trained?</label>
+                <label><input type="checkbox"  name="inputPotty" ng-model="child.potty_trained" value="false"></label>
+              </div>
+
+                <div class="checkbox">
+                <label>Special Needs?</label>
+                <label><input type="checkbox" name="inputNeeds" ng-model="child.special_needs" value="false"></label>
+              </div>
+      </div>
+    </div>
+
+    <!--   <div class="bs-example" ng-repeat="child in familyInfo">
+           <div class="form-group">
+               <label for="childName">Name</label>
+               <input type="Child Name" class="form-control" name="inputName" placeholder="Child Name" ng-model="child.name" value=""/>
+           </div>
+           <div class="form-group">
+               <label for="childAge">Age</label>
+               <input type="Child Age" class="form-control" name="inputAge" placeholder="Age" ng-model="child.age" value=""/>
+           </div>
+                   <div class="form-group">
+               <label for="childAllergies">Allergies</label>
+               <input type="Allergies" class="form-control" name="inputAllergies" placeholder="Allergies" ng-model="child.allergies" value=""/>
+           </div>
+                 <div class="form-group">
+               <label for="childFavFood">Favorite Food</label>
+               <input type="Food" class="form-control" name="inputFood" placeholder="Favorite Food" ng-model="child.fav_food" value=""/>
+           </div>
+               <div class="form-group">
+       <label for="inputNanny">Interests</label>
+       <input type="inputNanny" class="form-control" name="inputInterests" placeholder="primary" ng-model="child.interests" value=""/>
+           </div>
+
+           <div class="form-group">
+       <label for="inputNanny">Bed-Time</label>
+       <input type="inputNanny" class="form-control" name="inputBedTime" placeholder="Bed-Time" ng-model="child.bed_time" value="">
+         </div>
+             <div class="form-group">
+
+
+               <div class="checkbox">
+                 <label>Potty-Trained?</label>
+                 <label><input type="checkbox"  name="inputPotty" ng-model="child.potty_trained" value="false"></label>
+               </div>
+
+                 <div class="checkbox">
+                 <label>Special Needs?</label>
+                 <label><input type="checkbox" name="inputNeeds" ng-model="child.special_needs" value="false"></label>
+               </div>
+          </div>
+        </div>
+    </div> -->
+ <button type="submit" class="btn btn-secondary" ng-click="updateFamily(familyInfo)">Update Family</button>
+   </form>
+</article>

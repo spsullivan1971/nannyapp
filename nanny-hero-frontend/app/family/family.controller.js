@@ -17,6 +17,15 @@
         FamilyService.getFamily()
       };
 
+      $scope.updateFamily= function(data){
+        console.log(data);
+      }
+
+      $scope.editFamily = function(){
+        console.log("we need to edit: ", $rootScope.familyInfo);
+        $location.path('/editFamily');
+      };
+
       $scope.addFamily = function(familyObject, childInfo){
         if(childInfo === undefined){
 
@@ -39,6 +48,7 @@
           $rootScope.family.children[children] = childInfo;
           console.log("family is: ", $rootScope.family);
           FamilyService.addFamily($rootScope.family);
+          $rootScope.familyInfo = $rootScope.family;
           $location.path('/myFamily');
         }
       };
