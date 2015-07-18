@@ -4,7 +4,8 @@
     .module('nannyHero', [
       'ngRoute',
       'family',
-      'nanny'
+      'nanny',
+      'ui.bootstrap'
       ])
     .config(function($routeProvider){
       $routeProvider

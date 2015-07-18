@@ -3,7 +3,7 @@
 <div class='nannyViewWrap' ng-controller='HomeController'>
 
   <div class='picture'>
-    <img src="http://api.randomuser.me/portraits/women/31.jpg" alt="">
+    <img src="{{nannyInfo.picture}}" alt="">
   </div>
 
   <div class='info'>
@@ -13,7 +13,7 @@
   </div>
 
   <div class='viewChildren'>
-    <button type="submit" class="btn btn-primary">Child Info</button>
+    <button type="submit" class="btn btn-primary" ng-click="open()">Child Info</button>
   </div>
 
   <div class='deleteFromView'>
