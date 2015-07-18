@@ -20,17 +20,17 @@
 </div>
 
 <div ng-controller='HomeController' ng-show='nannyPage()' class='childWrap'>
-<div class='childViewWrap' ng-repeat="childInfo in nannyInfo.children">
+<div class='childViewWrap' ng-repeat="childInfo in nannyInfo.data.families">
 
   <div class='info'>
-    <h1>{{childInfo.name}}</h1>
-    <li>Age: {{childInfo.age}}</li>
-    <li>Allergies: {{childInfo.allergies}}</li>
-    <li>Bed Time: {{childInfo.bed_time}}</li>
-    <li>Favorite Food: {{childInfo.fav_food}}</li>
-    <li>Interests: {{childInfo.interests}}</li>
-    <li>Potty Trained: {{childInfo.potty_trained === 't' ? 'Yes':'No'}}</li>
-    <li>Special Needs: {{childInfo.special_needs === 't' ? 'Yes':'No'}}</li>
+    <h1>{{childInfo.children.name}}</h1>
+    <li>Age: {{childInfo.children.age}}</li>
+    <li>Allergies: {{childInfo.children.allergies}}</li>
+    <li>Bed Time: {{childInfo.children.bed_time}}</li>
+    <li>Favorite Food: {{childInfo.children.fav_food}}</li>
+    <li>Interests: {{childInfo.children.interests}}</li>
+    <li>Potty Trained: {{childInfo.children.potty_trained === 't' ? 'Yes':'No'}}</li>
+    <li>Special Needs: {{childInfo.children.special_needs === 't' ? 'Yes':'No'}}</li>
 
   </div>
 

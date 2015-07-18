@@ -31,7 +31,7 @@
             $rootScope.family.children[children] = childInfo;
             console.log("family is: ", $rootScope.family);
             FamilyService.addFamily($rootScope.family);
-            $location.path('/myFamily');
+            $location.path('/');
           }
         }
         else{
@@ -39,7 +39,7 @@
           $rootScope.family.children[children] = childInfo;
           console.log("family is: ", $rootScope.family);
           FamilyService.addFamily($rootScope.family);
-          $location.path('/myFamily');
+          $location.path('/');
         }
       };
 
