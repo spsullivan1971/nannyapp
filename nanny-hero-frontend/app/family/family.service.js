@@ -32,12 +32,17 @@
             return $http.get(nannyUrl + "/" + nannyName + '.json');
           }
 
+          var deleteNanny = function(familyName){
+            return $http.delete(nannyUrl + "/" + familyName + '.json');
+          }
+
           return {
             addFamily: addFamily,
             getFamily: getFamily,
             updateFamily: updateFamily,
             deleteFamily: deleteFamily,
-            getNannyInfo: getNannyInfo
+            getNannyInfo: getNannyInfo,
+            deleteNanny: deleteNanny
           };
   });
 

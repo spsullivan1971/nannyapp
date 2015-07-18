@@ -1,15 +1,21 @@
+<div class="header">
+  <div class="logoLeft">
+    <a href="/nanny-hero-frontend/#/"><h1>NannyHero</h1></a>
+  </div>
+</div>
+
 <div class='pageWrap'>
 <div class='contentWrap'>
-<div class='nannyViewWrap' ng-controller='HomeController'>
+<div class='nannyViewWrap' ng-controller='HomeController' ng-repeat="n in nannyInfo.data.families">
 
   <div class='picture'>
-    <img src="{{nannyInfo.picture}}" alt="">
+    <img ng-src="{{n.picture}}" alt="">
   </div>
 
   <div class='info'>
-    <h1>{{nannyInfo.name}}</h1>
-    <li><i class="fa fa-phone"></i>{{nannyInfo.phone_number}}</li>
-    <li><i class="fa fa-home"></i>{{nannyInfo.address}}</li>
+    <h1>{{n.name}}</h1>
+    <li><i class="fa fa-phone"></i>{{n.phone_number}}</li>
+    <li><i class="fa fa-home"></i>{{n.address}}</li>
   </div>
 
   <div class='viewChildren'>
@@ -17,7 +23,7 @@
   </div>
 
   <div class='deleteFromView'>
-    <i class="fa fa-times" ng-click="deleteFamily()"></i>
+    <i class="fa fa-times" ng-click="deleteNanny(nannyInfo.name)"></i>
   </div>
 
 
