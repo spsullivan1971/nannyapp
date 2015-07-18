@@ -24,8 +24,8 @@
             $http.post(url + '.json' + familyId);
           }
 
-          var deleteFamily = function(familyId){
-            $http.delete(url, familyId);
+          var deleteFamily = function(familyName){
+            return $http.delete(url + '/' + familyName + '.json');
           }
 
           var getNannyInfo = function(nannyName){
@@ -42,7 +42,7 @@
             updateFamily: updateFamily,
             deleteFamily: deleteFamily,
             getNannyInfo: getNannyInfo,
-            deleteNanny: deleteNanny
+            deleteNanny: deleteNanny,
           };
   });
 
