@@ -59,13 +59,12 @@
 
 
               <div class="checkbox">
-                <label>Potty-Trained?</label>
-                <label><input type="checkbox"  name="inputPotty" ng-model="child.potty_trained" value="false"></label>
+                <label>Potty-Trained? (t or f)</label>
+                <label><input type="text"  maxlength= "1" name="inputPotty" ng-model="child.potty_trained" value="child.potty_trained"></label>
               </div>
-
                 <div class="checkbox">
-                <label>Special Needs?</label>
-                <label><input type="checkbox" name="inputNeeds" ng-model="child.special_needs" value="false"></label>
+                <label>Special Needs? (t or f)</label>
+                <label><input type="text" maxlength="1" name="inputNeeds" ng-model="child.special_needs" value="child.special_needs"></label>
               </div>
       </div>
     </div>
