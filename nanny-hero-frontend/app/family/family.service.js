@@ -21,8 +21,12 @@
           }
 
           var updateFamily = function(familyInfo){
+            var something = {
+              family: familyInfo
+            }
+            console.log('id: ', familyInfo.id);
             console.log(familyInfo);
-            return $http.patch(url + '/' + familyInfo.name + '.json', familyInfo);
+            return $http.patch(url + '/' + familyInfo.name + '.json', something);
           }
 
           var deleteFamily = function(familyName){
