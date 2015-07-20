@@ -19,5 +19,9 @@
           templateUrl: 'app/family/views/myFamily.html',
           controller: 'FamilyController'
         })
+        .when('/editFamily', {
+          templateUrl: 'app/family/views/editFamily.html',
+          controller: 'FamilyController'
+        })
     });
 })();
