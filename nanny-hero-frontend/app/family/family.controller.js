@@ -17,6 +17,17 @@
         FamilyService.getFamily()
       };
 
+      $scope.updateFamily= function(data){
+        FamilyService.updateFamily(data).success(function(data){
+          $location.path('/myFamily');
+        })
+      }
+
+      $scope.editFamily = function(){
+        console.log("we need to edit: ", $rootScope.familyInfo);
+        $location.path('/editFamily');
+      };
+
       $scope.addFamily = function(familyObject, childInfo){
         if(childInfo === undefined){
 
